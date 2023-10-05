@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    background: whitesmoke;
+    color: black;
+}
+
+.title{
+    font-family: "Comic Sans MS";
+    font-size: 20px;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.title-sub{
+    font-size: 13px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.food{
+    margin: 20px auto;
+    width: 200px;
+    background: white;
+    color:black;
+    padding:20px;
+    border-radius: 5px;
+}
+
+.navbar{
+    background: black;
+    padding: 20px;
+}
+
+.navbar a{
+    margin-right: 10px;
+    text-decoration: white;
+}
