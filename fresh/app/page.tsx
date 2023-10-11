@@ -7,7 +7,6 @@ export default function Home() {
 
   return (
     <div>
-
         <h4 className="title">NewsLetter Colleague</h4>
         <p className="title-sub">You Become My Colleague</p>
         {/*<a href={link}>링크</a>*/}
