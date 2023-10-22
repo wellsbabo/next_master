@@ -1,3 +1,7 @@
+body{
+    margin:0
+}
+
 .list-bg {
     background: rgb(249, 250, 255);
     padding: 10px;
@@ -18,3 +22,19 @@
     color: grey;
     margin : 5px 0px;
 }
+
+.p-20 {
+    padding: 20px;
+  }
+  input {
+    box-sizing: border-box;
+    padding: 10px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  button {
+    padding: 10px 15px;
+    background: lightgray;
+    border: none;
+    border-radius: 5px;
+  } 
