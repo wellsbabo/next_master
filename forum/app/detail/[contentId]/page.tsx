@@ -9,7 +9,8 @@ export default async function Detail(props:any){
         _id:new ObjectId(props.params.contentId)
     })
 
-    console.log(props.params.contentId)
+    // console.log(props.params.contentId)
+
   
     return (
             <div>
