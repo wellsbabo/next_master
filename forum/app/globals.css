@@ -51,3 +51,10 @@ body{
 .logo {
     font-weight: bold;
 }
+
+.list-item{
+    opacity: 1;
+
+    /* css 스타일이 바뀔때 1초에 걸쳐서 바뀌게 해줘 */
+    transition: all 1s; 
+}
