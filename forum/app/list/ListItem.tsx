@@ -14,39 +14,50 @@ export default function ListItem(props:any){
                                     <Link href={"/detail/"+data._id} >
                                         <h4>{props.result[index].title}</h4>
                                     </Link>
-                                    <span onClick={(e) => {
-                                        // fetch('/api/delete',{
-                                        //     method: 'DELETE',
-                                        //     body:data._id
-                                        // }).then((r)=>{
-                                        //     if(r.status == 200){
-                                        //         return r.json();
-                                        //     } else {
-                                        //         //서버가 에러코드 전송시 실행할 코드. ex)500
-                                        //     }
-                                        // }).then((result) => {
-                                        //     //성공시 실행할 코드
-                                        //     // e.target.parentElement.style.opacity = 0;
-                                        //     const target = e.target as HTMLSpanElement;
-                                        //     const parent = target.parentElement as HTMLDivElement;
-                                        //     parent.style.opacity = '0';
-                                        //     // console.log()
-                                        //     // if(target.parentElement?.style.opacity){
-                                        //     //     target.parentElement.style.opacity = "0";
-                                        //     //     // console.log(target.parentElement.style);
-                                        //     // }
-                                        //
-                                        //     setTimeout(() => {
-                                        //         parent.style.display = 'none';
-                                        //     },1000)
-                                        //
-                                        //
-                                        // }).catch((err) => {
-                                        //     //인터넷 문제로 실패시 실행할 코드? 네트워크 에러
-                                        //     console.log();
-                                        // })
+                                    <button className="list-btn" onClick={(e) => {
+                                        fetch('/api/delete',{
+                                            method:'DELETE', body:data._id
+                                        }).then(() => {
+                                            const target = e.target as HTMLSpanElement;
+                                            const parent = target.parentElement as HTMLDivElement;
+                                            parent.style.opacity = '0';
+                                            setTimeout(() => {
+                                                parent.style.display = 'none';
+                                            },1000)
+                                        })
+                                    }}>🗑️</button>
+                                    {/* <span onClick={(e) => {
+                                        fetch('/api/delete',{
+                                            method: 'DELETE',
+                                            body:data._id
+                                        }).then((r)=>{
+                                            if(r.status == 200){
+                                                return r.json();
+                                            } else {
+                                                console.log("실패")
+                                                // return null;
+                                                //서버가 에러코드 전송시 실행할 코드. ex)500
+                                            }
+                                        }).then((r) => {
+                                            //성공시 실행할 코드
+                                            // e.target.parentElement.style.opacity = 0;
+                                            const target = e.target as HTMLSpanElement;
+                                            const parent = target.parentElement as HTMLDivElement;
+                                            parent.style.opacity = '0';
+                                            // console.log()
+                                            // if(target.parentElement?.style.opacity){
+                                            //     target.parentElement.style.opacity = "0";
+                                            //     // console.log(target.parentElement.style);
+                                            // }
+                                            setTimeout(() => {
+                                                parent.style.display = 'none';
+                                            },1000)
+                                        }).catch((err) => {
+                                            //인터넷 문제로 실패시 실행할 코드? 네트워크 에러
+                                            console.log();
+                                        }) */}
 
-
+{/* 
                                         //쿼리 스트링 문법
                                         fetch('/api/delete?id=' + data._id)
                                             .then((r)=>{
@@ -62,12 +73,12 @@ export default function ListItem(props:any){
                                                 },1000)
                                             }).catch((err) => {
                                                 console.log(err);
-                                        })
+                                        }) */}
 
 
-                                       //URL 파라미터 문법
-                                       // fetch('/api/abc/fuck')
-                                    }}>🗑</span>
+                                       {/* //URL 파라미터 문법
+                                       // fetch('/api/abc/fuck') */}
+                                    {/* }}>🗑</span> */}
                                 </div>
                         </div>
                     )
