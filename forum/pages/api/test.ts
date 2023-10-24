@@ -6,7 +6,8 @@ export default async function handler(req:any, res:any){
     const db = client.db("forum");
 
     if(req.method == 'GET'){
-        console.log(123);
+        // console.log(123);
+        console.log(req.query);
         return res.status(200).json('버전 그대로야?!')
     }
 

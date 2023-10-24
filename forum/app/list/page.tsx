@@ -3,6 +3,8 @@ import Link from "next/link";
 import DetailLink from "./DetailLink";
 import ListItem from "@/app/list/ListItem";
 
+export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-static'
 
 export default async function List(){
 
