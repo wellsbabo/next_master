@@ -17,47 +17,24 @@ export default function ListItem(props:any){
                                     <button className="list-btn" onClick={(e) => {
                                         fetch('/api/delete',{
                                             method:'DELETE', body:data._id
-                                        }).then(() => {
-                                            const target = e.target as HTMLSpanElement;
-                                            const parent = target.parentElement as HTMLDivElement;
-                                            parent.style.opacity = '0';
-                                            setTimeout(() => {
-                                                parent.style.display = 'none';
-                                            },1000)
-                                        })
-                                    }}>🗑️</button>
-                                    {/* <span onClick={(e) => {
-                                        fetch('/api/delete',{
-                                            method: 'DELETE',
-                                            body:data._id
-                                        }).then((r)=>{
-                                            if(r.status == 200){
-                                                return r.json();
+                                        }).then((r) => {
+                                            if(r.ok){
+                                                const target = e.target as HTMLSpanElement;
+                                                const parent = target.parentElement as HTMLDivElement;
+                                                parent.style.opacity = '0';
+                                                setTimeout(() => {
+                                                    parent.style.display = 'none';
+                                                },1000)
                                             } else {
                                                 console.log("실패")
-                                                // return null;
-                                                //서버가 에러코드 전송시 실행할 코드. ex)500
                                             }
-                                        }).then((r) => {
-                                            //성공시 실행할 코드
-                                            // e.target.parentElement.style.opacity = 0;
-                                            const target = e.target as HTMLSpanElement;
-                                            const parent = target.parentElement as HTMLDivElement;
-                                            parent.style.opacity = '0';
-                                            // console.log()
-                                            // if(target.parentElement?.style.opacity){
-                                            //     target.parentElement.style.opacity = "0";
-                                            //     // console.log(target.parentElement.style);
-                                            // }
-                                            setTimeout(() => {
-                                                parent.style.display = 'none';
-                                            },1000)
                                         }).catch((err) => {
-                                            //인터넷 문제로 실패시 실행할 코드? 네트워크 에러
-                                            console.log();
-                                        }) */}
+                                                //인터넷 문제로 실패시 실행할 코드? 네트워크 에러
+                                                console.log();
+                                        })
+                                    }}>🗑️</button>
 
-{/* 
+                                    {/*
                                         //쿼리 스트링 문법
                                         fetch('/api/delete?id=' + data._id)
                                             .then((r)=>{

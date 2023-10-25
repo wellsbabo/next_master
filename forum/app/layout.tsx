@@ -19,8 +19,9 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // @ts-ignore
   let session = await getServerSession(authOptions);
-  console.log(session);
+  // console.log(session);
   return (
     <html lang="en">
       <body className={inter.className}>
