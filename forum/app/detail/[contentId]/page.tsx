@@ -1,6 +1,7 @@
 import {connectDB} from "@/util/database"
 import { ObjectId } from "mongodb"
 import Link from "next/link"
+import Comment from "@/app/detail/[contentId]/Comment";
 
 export default async function Detail(props:any){
 
@@ -20,6 +21,7 @@ export default async function Detail(props:any){
                 <Link href={"/edit/" + props.params.contentId}>
                     <button>수정</button>
                 </Link>
+                <Comment/>
             </div>
     )
 }
