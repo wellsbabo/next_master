@@ -10,7 +10,7 @@ export default async function handler(req:any, res:any){
     // @ts-ignore
     let session = await getServerSession(req, res, authOptions);
 
-    console.log(session);
+    // console.log(session);
 
     if(req.method == 'DELETE'){
         try{

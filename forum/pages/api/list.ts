@@ -6,5 +6,7 @@ export default async function handler(req:any, res:any){
 
     let result = await db.collection('post').find().toArray();
 
+    // console.log(result);
+
     res.status('200').json(result);
 }

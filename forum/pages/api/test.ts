@@ -10,9 +10,7 @@ export default async function handler(req:any, res:any){
     let session = await getServerSession(req, res, authOptions);
     // console.log(session);
 
-    if(session){
-        req.body.author = session.user?.email;
-    }
+
 
     if(req.method == 'GET'){
         // console.log(123);
@@ -21,6 +19,9 @@ export default async function handler(req:any, res:any){
     }
 
     if(req.method == 'POST'){
+        if(session){
+            req.body.author = session.user?.email;
+        }
         // console.log(req.body.title);
         // console.log(req.body.content);
 
