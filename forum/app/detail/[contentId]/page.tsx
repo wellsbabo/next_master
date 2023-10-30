@@ -6,6 +6,7 @@ import Link from "next/link"
 import Comment from "@/app/detail/[contentId]/Comment";
 import Like from "@/app/detail/[contentId]/Like";
 import {useEffect, useState} from "react";
+import {notFound} from "next/navigation";
 
 export default function Detail(props:any){
 
@@ -37,8 +38,12 @@ export default function Detail(props:any){
                     content:result.content,
                     author:result.author
                 });
-            });
+            })
+            .catch(() => {
+                return notFound();
+            })
     }
+
 
     useEffect(() => {
         const func = async() => {
