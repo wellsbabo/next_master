@@ -23,6 +23,7 @@ export default function Like(props:any){
             method:'GET'
         }).then((r) => {
             if(r.status == 200){
+                // console.log(r);
                 return r.json();
             }
         }).then((result) => {
@@ -34,7 +35,8 @@ export default function Like(props:any){
         const func = async() => {
             await getLike();
         }
-    })
+        func();
+    },[])
 
 
     return (
